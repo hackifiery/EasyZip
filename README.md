@@ -33,6 +33,7 @@ with EasyZip('example.zip') as ez:
     ez.add_file('file1.txt')
     ez.add_directory('my_directory')
 ```
+Also refer to the [usage_example.py](/examples/usage_example.py) file.
 
 ### Extracting zip content:
 ```python
