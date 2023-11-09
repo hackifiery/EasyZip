@@ -1,7 +1,7 @@
 import os
 import sys
 import unittest
-from EasyZip.easyzip import *
+from easyzip import *
 
 class TestEasyZip(unittest.TestCase):
 
@@ -27,11 +27,11 @@ class TestEasyZip(unittest.TestCase):
 
     def test_create_and_extract_zip(self):
         # Test creating a zip file and extracting its contents
-        with EasyZip(self.zip_filename) as ez:
+        with easyzip(self.zip_filename) as ez:
             ez.add_file('file1.txt')
             ez.add_directory(self.test_directory)
 
-        with EasyZip(self.zip_filename) as ez:
+        with easyzip(self.zip_filename) as ez:
             ez.extract_to(self.extract_path)
 
         # Check if the extracted directory contains the same files as the test directory
