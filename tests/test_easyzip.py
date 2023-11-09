@@ -1,7 +1,7 @@
 import os
 import sys
 import unittest
-from EasyZip.easyzip import EasyZip
+from EasyZip.easyzip import *
 
 class TestEasyZip(unittest.TestCase):
 
