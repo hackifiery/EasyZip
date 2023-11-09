@@ -1,7 +1,9 @@
 import os
 import sys
 import unittest
-from easyzip import *
+sys.path.insert(1, '/easyzip')
+
+from easyizp import *
 
 class TestEasyZip(unittest.TestCase):
 
