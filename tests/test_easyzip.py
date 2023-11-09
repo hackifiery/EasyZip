@@ -1,12 +1,8 @@
 import os
 import sys
 import unittest
-
-# Add the path to the root directory of your project to the Python path
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-sys.path.insert(0, project_root)
-
 from EasyZip.easyzip import EasyZip
+
 class TestEasyZip(unittest.TestCase):
 
     def setUp(self):
