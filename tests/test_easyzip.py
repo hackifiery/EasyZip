@@ -2,11 +2,9 @@ import os
 import sys
 import unittest
 
-# Add the root directory of your project to the Python path
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+# Add the path to the root directory of your project to the Python path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, project_root)
 
 from easyzip import EasyZip
 
@@ -34,11 +32,11 @@ class TestEasyZip(unittest.TestCase):
 
     def test_create_and_extract_zip(self):
         # Test creating a zip file and extracting its contents
-        with easyzip(self.zip_filename) as ez:
+        with EasyZip(self.zip_filename) as ez:
             ez.add_file('file1.txt')
             ez.add_directory(self.test_directory)
 
-        with easyzip(self.zip_filename) as ez:
+        with EasyZip(self.zip_filename) as ez:
             ez.extract_to(self.extract_path)
 
         # Check if the extracted directory contains the same files as the test directory
