@@ -11,6 +11,13 @@ class EasyZip:
         """
         self.zip_filename = zip_filename
         self.zip_file = zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED)
+    def __enter__(self):
+        self.zipfile = zipfile.ZipFile(self.filename, self.mode)
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        if self.zipfile:
+            self.zipfile.close()
 
     def add_file(self, file_path, arcname=None):
         """
