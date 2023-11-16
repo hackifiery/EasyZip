@@ -9,7 +9,7 @@ class EasyZip:
         Args:
             zip_filename (str): The name of the zip file to create.
         """
-        self.zip_filename = filename
+        self.mode = mode
         self.zip_filename = zip_filename
         self.zip_file = zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED)
     def __enter__(self):
