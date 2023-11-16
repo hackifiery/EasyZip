@@ -2,13 +2,14 @@ import zipfile
 import os
 
 class EasyZip:
-    def __init__(self, zip_filename):
+    def __init__(self, zip_filename, mode='w'):
         """
         Constructor for EasyZip class.
 
         Args:
             zip_filename (str): The name of the zip file to create.
         """
+        self.filename = filename
         self.zip_filename = zip_filename
         self.zip_file = zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED)
     def __enter__(self):
