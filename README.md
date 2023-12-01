@@ -11,7 +11,7 @@ EasyZip is not available on PyPI, so you need to manually install it:
    Clone the `easyzip` GitHub repository to your local machine using Git:
 
    ```bash
-   git clone https://github.com/yourusername/easyzip.git
+   git clone https://github.com/hackifiery/easyzip.git
 
 2. **Install the package:**
 
