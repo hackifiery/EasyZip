@@ -16,11 +16,17 @@ class EasyZip:
             self.zipfile.close()
 
     def add_file(self, file_path):
+        """
+        Adds a file to the zip file.
+        """
         if self.zipfile:
             self.zipfile.write(file_path, os.path.basename(file_path))
 
 
     def add_directory(self, directory_path):
+        """
+        Adds a directory to the zip file.
+        """
         if self.zipfile:
             for root, dirs, files in os.walk(directory_path):
                 for file in files:
