@@ -4,14 +4,13 @@ EasyZip is a lightweight version of `Zipfile` that simplifies working with zip f
 
 ## Installation
 
-EasyZip is not available on PyPI, so you need to manually install it:
-
 1. **Clone the Repository:**
 
    Clone the `easyzip` GitHub repository to your local machine using Git:
 
    ```bash
    git clone https://github.com/hackifiery/easyzip.git
+   ```
 
 2. **Install the package:**
 
@@ -20,6 +19,7 @@ EasyZip is not available on PyPI, so you need to manually install it:
    ```bash
    cd easyzip
    pip install .
+   ```
 
 ## Usage
 To use the module you will first have to import it:
@@ -33,10 +33,11 @@ with EasyZip('example.zip') as ez:
     ez.add_file('file1.txt')
     ez.add_directory('my_directory')
 ```
-Also refer to the [usage_example.py](/examples/usage_example.py) file.
 
 ### Extracting zip content:
 ```python
 with EasyZip('example.zip') as ez:
     ez.extract_to('extracted_directory')
 ```
+
+Also refer to the [usage_example.py](/examples/usage_example.py) file.
